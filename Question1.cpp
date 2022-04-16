@@ -1,21 +1,36 @@
 #include <iostream>
 using namespace std;
 
-void swapTwoValues(int n1, int n2)
-void wapTwoValues(float 1, float 2)
+void swapTwovalues(int n1, int n2)
+{
+    int temp;
+    cout << "Enter Int n1 and n2:";
+    cin>> n1 >> n2;
+    cout<<"Before swap int n1 = "<<n<<" int n2 = "<<n2<<endl;
+    temp = n1;
+    n1= n2;
+    n2 = temp;
+    cout<<"After swap int n1 = "<<n1<<" int n2 = "<<n2<<endl;
+}
+
+void swapTwoValues(float f1, float f2)
+{
+int temp;
+cout << "Enter float f1 and f2:";
+cin>> f1 >> f2
+cout<<"Before swap float f1 = "<<f1<<" float f2 = "<<f2<<endl;
+    temp = f1;
+    f1 = f2;
+    f2 = temp;
+cout<<"After swap float f1 = " <<f1<<"float f2 = "<<f2<<endl;
+}
+
 int main()
 {
-    int a = 5, b = 10, temp;
-
-    cout << "Before the swap." << endl;
-    cout << "a = " << a << ", b = " << b << endl;
-
-    temp = a;
-    a = b;
-    b = temp;
-
-    cout << "/nAfter the swap" << endl;
-    cout << "a = " << a << ", b = " << b << endl;
+    int n1, n2;
+    float f1, f2;
+    swapTwoValues(n1, n2)
+    swapTwoValues(f1, f2)
 
     return 0;
-    }
+}

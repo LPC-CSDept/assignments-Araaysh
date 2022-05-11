@@ -1,36 +1,29 @@
-#include <iostream>
+#include<cmath>
+#include<iostream>
+#include<vector>
 using namespace std;
+const int N=10;
 
-void swapTwovalues(int n1, int n2)
-{
-    int temp;
-    cout << "Enter Int n1 and n2:";
-    cin>> n1 >> n2;
-    cout<<"Before swap int n1 = "<<n<<" int n2 = "<<n2<<endl;
-    temp = n1;
-    n1= n2;
-    n2 = temp;
-    cout<<"After swap int n1 = "<<n1<<" int n2 = "<<n2<<endl;
+void answer(int number[],int n){
+    vector<int>v;
+    if (abs(number[0]-number[1])<10)
+    {
+        v.push_back(number[0]);
+    }
+    for (int i = 1; i < n; i++)
+    {
+      
+        if(abs(number[i]-number[i+1])<10 && abs(number[i]-number[i-1])<10){
+        v.push_back(number[i]);
+        }
+    }
+    cout<<"less than 10 : ";
+    for(int i=0;i<v.size();i++){
+        cout<<v[i]<<" ";
+    }
 }
+int main(){
+int number[N]={10,15,0,-25,19,20,25,30,45,20};
+answer(number,N);
 
-void swapTwoValues(float f1, float f2)
-{
-int temp;
-cout << "Enter float f1 and f2:";
-cin>> f1 >> f2
-cout<<"Before swap float f1 = "<<f1<<" float f2 = "<<f2<<endl;
-    temp = f1;
-    f1 = f2;
-    f2 = temp;
-cout<<"After swap float f1 = " <<f1<<"float f2 = "<<f2<<endl;
-}
-
-int main()
-{
-    int n1, n2;
-    float f1, f2;
-    swapTwoValues(n1, n2)
-    swapTwoValues(f1, f2)
-
-    return 0;
 }

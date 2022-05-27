@@ -1,23 +1,47 @@
 #include <iostream>
-
+#include <fstream>
+#include <sstream>
 using namespace std;
-void printtriangle(int numbers[][3], int);
 
-int main()
-{
-    const int size=3;
-    int numbers[size][size]={{0,1,2},{3,4,5},{6,7,8}};
-    printtriangle(numbers, size);
-    return 0;
+const unsigned short N = 5;
+struct scores {
+    double sc[N];
+    string grade;
+};
+struct grade {
+    string first;
+    string last;
+    string ssn;
+    scores score;
+};
+grade g;
+
+
+int main() {
+    ifstream ifso;
+    ifso. open ("grades.txt", fstream::in);
+    ofstream ofso;
+    ofso.open ("grades.bin", fstream::out);
+    if(!ifso || !ofso)
+string name1;
+string name2;
+string ssn;
+double g1,g2,g3,g4;
+string grade;
+ff >> line;
+stringstream contents(line);
+contents>>namef1>>name2>>ssn>>g1>>g2>>g3>>g4>>grade;
+scores s{{g1,g2,g3,g4,grade}}
+grade g{name1,name2,ssn,s};
+f.write(reinterpret_cast<char*>(8g), sizeof(grade));
 }
-void printtriangle(int numbers[][3], int size)
 {
-    for (int i=0;i<size;i++){
-        for (int j=0;j<size;j++){
-            if (j<=i){
-                std::cout << numbers[i][j] << ' ';
-            }
-        }
-        std::cout << "\n" ;
-    }
+ss.clear();
+ofso.write((char*)&g,sizeof(g));
+cout <<i << "::" <<sizeof(g)<<"bytes writing";
+
+i++;
+return 0;
+
 }
+
